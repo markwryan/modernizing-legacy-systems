@@ -1,5 +1,7 @@
-## Tales from the Front Lines
-### Modernizing Legacy Systems
+### Tales from the Front Lines
+#### Modernizing a Legacy System
+
+https://github.com/markwryan/modernizing-legacy-systems
 
 ---
 
