@@ -19,7 +19,7 @@ Who is AXS? Explain role at AXS.
 
 ---
 
-### @fa[fa-exclamation-triangle]
+#### @fa[exclamation-triangle]
 
 * Not selling anything
 Note:
