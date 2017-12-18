@@ -15,17 +15,14 @@ Who is AXS? Explain role at AXS.
 
 ---
 
-## Slides
-
-* Give link to the slides so people can pay attention
+https://github.com/markwryan/modernizing-legacy-systems
 
 ---
 
 ## A Warning!
 
-* Not here to tell convince you to move your company away from a monolith
+* Not selling anything
 * The issues ahead are complicated
-* Only here to share my experience and motives that lead to us starting move away from developing inside a monolith
 * Continually growing process
 
 Note:
