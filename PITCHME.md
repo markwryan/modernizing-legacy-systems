@@ -1,5 +1,5 @@
-### Tales from the Front Lines
-#### Modernizing a Legacy System
+### tales from the front lines
+#### modernizing a legacy system
 
 
 ---
@@ -11,7 +11,7 @@ AXS
 https://github.com/markwryan
 
 Note:
-Who is AXS? Explain role at AXS.
+What is AXS? Explain role at AXS.
 
 ---
 
@@ -19,23 +19,41 @@ Who is AXS? Explain role at AXS.
 
 ---
 
-#### @fa[exclamation-triangle]
+# @fa[exclamation-triangle]
 
-* Not selling anything
-* The issues ahead are complicated
-* Continually growing process
++++
 
+Not selling anything
+
+Note:
+Not trying to convince anyone this is the only way. If a monolith works for your company, great!
+
++++
+
+The issues ahead are complicated
+
++++
+
+Continually growing process
 
 Note:
 Set the stage and set some expectations. Goal of the talk is not to sell one solution in the best, but to educate around some issues and solutions to the issues.
 
-Not selling as in, not trying to convince anyone this is the only way. If a monolith works for your company, great!
+---
+
+#### monoliths
+
+A single project/solution/repository which contains multiple products as well as their shared dependencies.
 
 ---
 
-#### Life as it is
+#### a starting point
 
-* A central repository
-* No internal dependency management, direct references across projects
-* Version control in git
-* Basic CI, minimal test coverage
+* central repository
+* no internal dependency management
+* git
+* ci 
+* minimal test coverage
+
+---
+
