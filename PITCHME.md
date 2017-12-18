@@ -22,15 +22,14 @@ Who is AXS? Explain role at AXS.
 #### @fa[exclamation-triangle]
 
 * Not selling anything
-
-Note:
-* Not selling as in, not trying to convince anyone this is the only way. If a monolith works for your company, great!
-
 * The issues ahead are complicated
 * Continually growing process
 
 Note:
-* Set the stage and set some expectations. Goal of the talk is not to sell one solution in the best, but to educate around some issues and solutions to the issues.
+Not selling as in, not trying to convince anyone this is the only way. If a monolith works for your company, great!
+
+Note:
+Set the stage and set some expectations. Goal of the talk is not to sell one solution in the best, but to educate around some issues and solutions to the issues.
 
 ---
 
