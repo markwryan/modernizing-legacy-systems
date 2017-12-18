@@ -15,13 +15,16 @@ Who is AXS? Explain role at AXS.
 
 ---
 
-https://github.com/markwryan/modernizing-legacy-systems
+###### https://github.com/markwryan/modernizing-legacy-systems
 
 ---
 
-## A Warning!
+### @fa[fa-exclamation-triangle]
 
 * Not selling anything
+Note:
+Not selling as in, not trying to convince anyone this is the only way. If a monolith works for your company, great!
+
 * The issues ahead are complicated
 * Continually growing process
 
@@ -30,10 +33,9 @@ Set the stage and set some expectations. Goal of the talk is not to sell one sol
 
 ---
 
-## Life as it is
+### Life as it is
 
-* A central repository, containing the majority of our apps, websites and libraries
+* A central repository
 * No internal dependency management, direct references across projects
 * Version control in git
-* Basic CI
-* No tests
+* Basic CI, minimal test coverage
