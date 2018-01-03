@@ -71,9 +71,7 @@ Set the stage and set some expectations. Goal of the talk is not to sell one sol
 ---
 ## monoliths
 
-```
 A single project/solution/repository which contains multiple products as well as their shared dependencies.
-```
 
 ---
 ### motivations
@@ -144,12 +142,42 @@ the smaller project lead to faster load times and better overall performance in 
 ### splitting out libraries
 
 ---
-### in flight changes
-
----
 ### packaging
 
 +++
+Flexibility
+
+Note:
+Versioning each component separately, no longer forced to release everything all at once
+
++++
+Clarity
+
+Note:
+Clearly defined relationships between packages. Allows for each package to be first class citizens, with its own set of documentation, CI, tests, and releases.
+
++++
+
+Reenforce Contracts
+
+Note:
+More obvious the contracts between pieces and how important they are to be clearly visibile and managed. The differences between method visibility, information sharing, APIs should be more clear between the internal components
+
++++
+
+Limiting Scope
+
+Note:
+In a monolith, a single change can immediately impact all of the applications. Versioning and packaging each component allows changes to be rolled out in a controlled fashion instead of immediately consumed.
+
++++
+
+Testing
+
+Note:
+Smaller, more concise packages are less intimidating to start adding in tests. The increased time and complexity to make a change, build a package and locally deploy and test it will also push developers to write more automated tests that can test and validate changes without having to go through the entire build and deployment lifecycle.
+
+---
 
 Building library releases off tags
 
@@ -170,7 +198,47 @@ multiple builds of the same version
 ### developing with packages
 
 ---
+
+### paket
+
+---
+
+### circular references
+
+---
+### internal dependency tiers
+
+---
+### in flight changes
+
++++
+updating with changes from the monolith
+
+```
+cd monolith
+git pull origin master
+git subtree split --prefix src/Libs/Utilities -b split-utilities
+git push origin split-utilities
+cd ../Utilities
+git pull monolith split-utilities
+git push origin master
+```
++++
+
+
+---
 ### git knowledge gaps
+
+Note:
+Talk about how difficult it was for people to take over and deal with moving in packages
+
+---
+### too much of a good thing
+
+Note:
+Talk about how tempting it was to use the packages more than just in the single app. We started using them
+for more projects because they were readily available. Problem was that the documentation and knowledge around
+the process to update and manage the packages didn't yet exist.
 
 ---
 ## versioning
@@ -181,7 +249,6 @@ useful semantic versioning
 ---
 
 ### building
-
 
 ---
 
