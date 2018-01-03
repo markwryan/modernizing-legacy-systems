@@ -107,7 +107,7 @@ moving into the cloud
 
 ### picking a target
 
-* a tangible project (desktop app, web app, scheduled task)
+* a tangible project (desktop app, web app)
 * being worked on by a single team
 * lesson learned: the more self-contained the better
 
