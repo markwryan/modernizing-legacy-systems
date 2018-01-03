@@ -129,19 +129,24 @@ copied the project to the root directory
 
 pushed to new remote
 
+---
+
 ### splitting up with git
 * move project to it's own separate repository
 * keep history
 
 ---
+
 ### dev life improvements
 
 the smaller project lead to faster load times and better overall performance in our IDE compared to loading the entire monolith
 
 ---
+
 ### splitting out libraries
 
 ---
+
 ### packaging
 
 +++
