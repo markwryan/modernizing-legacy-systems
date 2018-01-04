@@ -1,7 +1,6 @@
 ### tales from the front lines
 #### modernizing a legacy system
 
-
 ---
 
 Mark Ryan
@@ -21,7 +20,7 @@ What is AXS? Explain role at AXS.
 ## why?
 
 Note:
-In a perfect world, we shouldn't touch the repo and leave it as is. Lay out why not doing that might be the right choice under certain cirumstances.
+In a perfect world, we shouldn't touch the repo and leave it as is. Lay out why not doing that might be the right choice under certain cirumstances. What caused the monolith to be a blocker from where we wanted to go
 
 +++
 
@@ -68,6 +67,13 @@ Not trying to convince anyone this is the only way. If a monolith works for your
 Note:
 Set the stage and set some expectations. Goal of the talk is not to sell one solution in the best, but to educate around some issues and solutions to the issues.
 
++++
+
+## difficult topics
+
+Note:
+Not easy, there is a lot to take into account. We are just starting down this process, and not saying this is the only way or the best way, but has worked for us and has gotten us closer to where we want to be.
+
 ---
 ## monoliths
 
@@ -80,18 +86,33 @@ A single project/solution/repository which contains multiple products as well as
 
 structured, automated releases
 
+Note:
+Had issues with manual releases taking a long time. Prone to errors. Every release was different and difficult
+
 +++
 
 separate releases
 
+Note:
+Desire to release some apps more often. Lots of changes ended up waiting for releases, leading to larger, more complicated releases.
 +++
 
 limit immediate scope of library changes
 
+Note:
+Any library change immediately impacts all apps. Hard to plan for and manage. Mitigate risk of making changes
++++
+
+better tracking of changes
+
+Note:
+Difficult time tracking what changes are made, what they affect. Even with issue tracking. Changes shouldn't be a surprise.
 +++
 
 moving into the cloud
 
+Note:
+Setting up a new environment and process, wanted to take lessons learned to make it better.
 ---
 
 ### a starting point
@@ -101,7 +122,10 @@ moving into the cloud
 * no internal dependency management
 * git
 * ci
-* minimal test coverage :(
+* minimal test coverage
+
+Note:
+Talk about setup, which is pretty typical. Highlight important factors that make the move possible. Relate to apps of any language.
 
 ---
 
@@ -112,41 +136,46 @@ moving into the cloud
 * lesson learned: the more self-contained the better
 
 Note:
-How we decided on a subject to first try and split out. Note that having a single team working on the project makes things easier, also talk about how picking a more self-contained, or one with few internal dependencies might be easier
+How to decide on a subject to first try and split out. Note that having a single team working on the project makes things easier, also talk about how picking a more self-contained, or one with few internal dependencies might be easier
 
 ---
 
 ### moving to a new repo
-+++
 
-created a new repository
-
-+++
-
-copied the project to the root directory
+* created a new repository
+* copied the project to the root directory
+* deleted everything else
+* pushed to new remote
 
 +++
 
-pushed to new remote
+a clean break
 
----
-
-### splitting up with git
-* move project to it's own separate repository
-* keep history
-
+Note:
+no expectation to pull in changes from the monolith after the change. Importance of a single team.
 ---
 
 ### dev life improvements
 
-the smaller project lead to faster load times and better overall performance in our IDE compared to loading the entire monolith
+* faster load times and better overall performance in our IDE
+* resharper
 
 ---
 
 ### splitting out libraries
 
----
+* needed libraries to be available outside the monolith
 
++++
+
+* published libraries from the monolith
+
++++
+
+* quickly became unruly
+* messy, difficult to version
+
+---
 ### packaging
 
 +++
@@ -184,27 +213,19 @@ Smaller, more concise packages are less intimidating to start adding in tests. T
 
 ---
 
-Building library releases off tags
+## versioning
+
+useful semantic versioning
 
 +++
 
-Building a dependency graph
+knowledge gap around what constituted an increase where
 
 +++
 
-Hosting packages
+"semantic versioning lite"
 
-+++
-Issues when packaging 
-multiple builds of the same version
-
-
----
-### developing with packages
-
----
-
-### paket
+`BigChange.PlannedRelease.HotFix`
 
 ---
 
@@ -238,18 +259,36 @@ Note:
 Talk about how difficult it was for people to take over and deal with moving in packages
 
 ---
+### developing with packages
+
++++
+
+Working with packages is a completely foreign concept
+
++++
+
+IDEs can make it tough to edit and consume packages at the same time
+
++++
+
+Not a lot of help available for C#
+
+---
+
+### issues with nuget
+
+---
+
+### paket
+
+---
+
 ### too much of a good thing
 
 Note:
 Talk about how tempting it was to use the packages more than just in the single app. We started using them
 for more projects because they were readily available. Problem was that the documentation and knowledge around
 the process to update and manage the packages didn't yet exist.
-
----
-## versioning
-
-useful semantic versioning
-
 
 ---
 
@@ -269,7 +308,7 @@ useful semantic versioning
 ### feedback from team
 
 ---
-### points of improvement
+### opportunities for improvement
 
 
 ---
