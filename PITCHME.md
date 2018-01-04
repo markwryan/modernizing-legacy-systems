@@ -95,24 +95,28 @@ separate releases
 
 Note:
 Desire to release some apps more often. Lots of changes ended up waiting for releases, leading to larger, more complicated releases.
+
 +++
 
 limit immediate scope of library changes
 
 Note:
 Any library change immediately impacts all apps. Hard to plan for and manage. Mitigate risk of making changes
+
 +++
 
 better tracking of changes
 
 Note:
 Difficult time tracking what changes are made, what they affect. Even with issue tracking. Changes shouldn't be a surprise.
+
 +++
 
 moving into the cloud
 
 Note:
 Setting up a new environment and process, wanted to take lessons learned to make it better.
+
 ---
 
 ### a starting point
@@ -121,7 +125,7 @@ Setting up a new environment and process, wanted to take lessons learned to make
 * multiple websites, desktop apps, tasks and libraries
 * no internal dependency management
 * git
-* ci
+* automated builds
 * minimal test coverage
 
 Note:
@@ -157,7 +161,7 @@ no expectation to pull in changes from the monolith after the change. Importance
 
 ### dev life improvements
 
-* faster load times and better overall performance in our IDE
+* better overall performance in our IDE
 * resharper
 
 ---
@@ -179,12 +183,14 @@ no expectation to pull in changes from the monolith after the change. Importance
 ### packaging
 
 +++
+
 Flexibility
 
 Note:
 Versioning each component separately, no longer forced to release everything all at once
 
 +++
+
 Clarity
 
 Note:
@@ -225,19 +231,22 @@ knowledge gap around what constituted an increase where
 
 "semantic versioning lite"
 
-`BigChange.PlannedRelease.HotFix`
+`MajorChange.PlannedRelease.HotFix`
 
 ---
 
 ### circular references
 
 ---
+
 ### internal dependency tiers
 
 ---
+
 ### in flight changes
 
 +++
+
 updating with changes from the monolith
 
 ```
@@ -249,6 +258,7 @@ cd ../Utilities
 git pull monolith split-utilities
 git push origin master
 ```
+
 +++
 
 
@@ -273,22 +283,50 @@ IDEs can make it tough to edit and consume packages at the same time
 
 Not a lot of help available for C#
 
++++
+
+Trouble versioning lead to having to pin dependency versions
+
+---
+
+### workflows for making package changes
+
+Note:
+Went through multiple workflows, none of which worked great. Major drawback that was made clear after moving outside of the monolith. talk about why this is so difficult -- because its not a great practice. Knowledge gap around establishing an API and programming against that instead of individual contributions. 
+
+---
+
+### locally including the package source
+* most straightforward
+* add the project into the solution/workspace
+
+---
+
+### locally including DLL references
+
+---
+
+### setting up a local nuget server
+
+---
+
+### publishing to a outside service
+
 ---
 
 ### issues with nuget
 
++++
+
+dependency resolution caused issues
+
++++
+
+package configuration caused to a lot of issues
+
 ---
 
 ### paket
-
----
-
-### too much of a good thing
-
-Note:
-Talk about how tempting it was to use the packages more than just in the single app. We started using them
-for more projects because they were readily available. Problem was that the documentation and knowledge around
-the process to update and manage the packages didn't yet exist.
 
 ---
 
@@ -309,6 +347,23 @@ the process to update and manage the packages didn't yet exist.
 
 ---
 ### opportunities for improvement
+
++++
+
+### too much of a good thing
+
+Note:
+Talk about how tempting it was to use the packages more than just in the single app. We started using them
+for more projects because they were readily available. Problem was that the documentation and knowledge around
+the process to update and manage the packages didn't yet exist.
+
++++
+
+internal tooling team
+
++++
+
+push for more training
 
 ---
 ### summary
