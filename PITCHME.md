@@ -174,7 +174,7 @@ no expectation to pull in changes from the monolith after the change. Importance
 
 * quickly became unruly
 * messy, difficult to version
-
+* unclear what version was being packaged
 ---
 ### packaging
 
@@ -192,7 +192,7 @@ Clearly defined relationships between packages. Allows for each package to be fi
 
 +++
 
-Reenforce Contracts
+Reinforce Contracts
 
 Note:
 More obvious the contracts between pieces and how important they are to be clearly visibile and managed. The differences between method visibility, information sharing, APIs should be more clear between the internal components
@@ -309,7 +309,6 @@ the process to update and manage the packages didn't yet exist.
 
 ---
 ### opportunities for improvement
-
 
 ---
 ### summary
