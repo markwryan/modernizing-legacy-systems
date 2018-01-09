@@ -7,7 +7,7 @@ Mark Ryan
 
 AXS
 
-https://github.com/markwryan/modernizing-legacy-systems
+github.com/markwryan/modernizing-legacy-systems
 
 Note:
 What is AXS? Explain role at AXS.
@@ -169,17 +169,18 @@ no expectation to pull in changes from the monolith after the change. Importance
 
 ### splitting out libraries
 
-* needed libraries to be available outside the monolith
+needed libraries to be available outside the monolith
 
 +++
 
-* published libraries from the monolith
+published libraries from within the monolith
 
 +++
 
 * quickly became unruly
 * messy, difficult to version
 * unclear what version was being packaged
+
 ---
 ### packaging
 
@@ -229,7 +230,17 @@ Goals around versioning
 
 +++
 
-knowledge gap around what constituted an increase where
+knowledge gaps
+
+Note:
+Gaps around what constituted an increase where. Monolith releases made it even more confusing.
+
++++
+
+non-developers hated it
+
+Note:
+Immediate dislike of not knowing a version till close to release.
 
 +++
 
@@ -241,7 +252,19 @@ knowledge gap around what constituted an increase where
 
 ### circular references
 
-* monolith hid bad choices
+* monolith hid bad practices
+
++++
+
+```
+A -> B -> C -> A
+```
+
++++
+
+```
+A -> C -> A
+```
 
 ---
 
@@ -251,14 +274,19 @@ knowledge gap around what constituted an increase where
 
 tier 0
 
+* No internal dependencies
+
 +++
 
 tier 1
 
+* Only tier 0 dependencies
 
 +++
 
 tier 2
+
+* tier 0 and tier 1 dependencies
 
 +++
 
@@ -289,7 +317,7 @@ updating with changes from the monolith
 
 `git subtree --split`
 
-* takes in a folder in the repo
+* takes in a path inside the repo
 * creates a branch in the repo only containing that folder as the root
 
 +++
@@ -308,7 +336,7 @@ git push origin master
 
 * easily pull over changes as needed
 * one-way
-* optionally allow for two-way if ever needed
+* two-way possible
 
 ---
 
@@ -316,6 +344,9 @@ git push origin master
 
 Note:
 Talk about how difficult it was for people to take over and deal with moving in packages
+
++++
+
 
 ---
 ### developing with packages
@@ -436,6 +467,7 @@ existing myget account
 
 * manual process
 * no setup for access from build server
+* privacy isues
 
 +++
 
