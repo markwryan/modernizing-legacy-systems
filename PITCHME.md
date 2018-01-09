@@ -157,12 +157,13 @@ a clean break
 
 Note:
 no expectation to pull in changes from the monolith after the change. Importance of a single team.
+
 ---
 
 ### dev life improvements
 
 * better overall performance in our IDE
-* resharper
+* inspections (resharper)
 
 ---
 
@@ -223,6 +224,9 @@ Smaller, more concise packages are less intimidating to start adding in tests. T
 
 useful semantic versioning
 
+Note:
+Goals around versioning
+
 +++
 
 knowledge gap around what constituted an increase where
@@ -237,9 +241,29 @@ knowledge gap around what constituted an increase where
 
 ### circular references
 
+* monolith hid bad choices
+
 ---
 
 ### internal dependency tiers
+
++++
+
+tier 0
+
++++
+
+tier 1
+
+
++++
+
+tier 2
+
++++
+
+tier _n_
+
 
 ---
 
@@ -247,7 +271,28 @@ knowledge gap around what constituted an increase where
 
 +++
 
+packages continue to change while work is being done
+
++++
+
 updating with changes from the monolith
+
++++
+
+### git subtree
+
+* similar to git submodules
+* repo within a repo
+* no added metadata
+
++++
+
+`git subtree --split`
+
+* takes in a folder in the repo
+* creates a branch in the repo only containing that folder as the root
+
++++
 
 ```
 cd monolith
@@ -261,8 +306,12 @@ git push origin master
 
 +++
 
+* easily pull over changes as needed
+* one-way
+* optionally allow for two-way if ever needed
 
 ---
+
 ### git knowledge gaps
 
 Note:
@@ -289,7 +338,7 @@ Trouble versioning lead to having to pin dependency versions
 
 ---
 
-### workflows for making package changes
+### workflows for testing package changes
 
 Note:
 Went through multiple workflows, none of which worked great. Major drawback that was made clear after moving outside of the monolith. talk about why this is so difficult -- because its not a great practice. Knowledge gap around establishing an API and programming against that instead of individual contributions. 
@@ -304,13 +353,24 @@ Went through multiple workflows, none of which worked great. Major drawback that
 
 ### locally including DLL references
 
+* build in visual studio
+* update references to point to build DLLs
+
 ---
 
 ### setting up a local nuget server
 
+* build
+* create package locally
+* host a local nuget feed 
+
 ---
 
 ### publishing to a outside service
+
+* push git branch
+* automated build
+* deploy to teamcity or myget
 
 ---
 
@@ -318,7 +378,10 @@ Went through multiple workflows, none of which worked great. Major drawback that
 
 +++
 
-dependency resolution caused issues
+nuget's dependency resolution caused issues
+
+Note:
+NuGet will silently choose the latest version when versions conflict
 
 +++
 
@@ -328,19 +391,69 @@ package configuration caused to a lot of issues
 
 ### paket
 
+https://fsprojects.github.io/Paket/
+
+* nuget alternative
+* cli tool
+
++++
+
+* clearer dependency management
+* transative dependencies vs direct dependencies
+
++++
+
+* locally reference dependencies via path
+* reference dependencies via git repo
+
++++
+
+* `paket outdated` - outdated packages
+* `paket why` - determine why a package is required
+* `paket simplify` - remove transative dependencies
+
 ---
 
 ### building
+
+* automated builds for every branch
+* build of the integration branch
+* build of release branch
 
 ---
 
 ### deploying
 
+* hybrid setup
+* aws
+* internal
+* directconnect
+
 ---
 ### deploying libraries
 
+existing myget account
+
+* manual process
+* no setup for access from build server
+
++++
+
+teamcity
+
 ---
 ### deploying apps
+
+* octopus
+
++++
+
+* create a release version
+* releases pushed as nuget packages
+* promoted deployments
+* smart configuration replacements
+* tennanted deployments
+* same, repeatable process interal and in  aws 
 
 ---
 ### feedback from team
