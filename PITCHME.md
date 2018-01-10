@@ -255,46 +255,6 @@ Immediate dislike of not knowing a version till close to release.
 
 ---
 
-### circular references
-
-* monolith hid bad practices
-
-+++
-
-`A -> B -> C -> A`
-
-+++
-
-`A -> C -> A`
-
----
-
-### internal dependency tiers
-
-+++
-
-tier 0
-
-* No internal dependencies
-
-+++
-
-tier 1
-
-* Only tier 0 dependencies
-
-+++
-
-tier 2
-
-* tier 0 and tier 1 dependencies
-
-+++
-
-tier _n_
-
----
-
 ### in-flight changes
 
 +++
@@ -409,46 +369,6 @@ Went through multiple workflows, none of which worked great. Major drawback that
 
 ---
 
-### issues with NuGet
-
-+++
-
-NuGet's dependency resolution caused issues
-
-Note:
-NuGet will silently choose the latest version when versions conflict
-
-+++
-
-package configuration caused to a lot of issues
-
----
-
-### paket
-
-https://fsprojects.github.io/Paket/
-
-* NuGet alternative
-* cli tool
-
-+++
-
-* clearer dependency management
-* transitive dependencies vs direct dependencies
-
-+++
-
-* locally reference dependencies via path
-* reference dependencies via git repo
-
-+++
-
-* `paket outdated` - outdated packages
-* `paket why` - determine why a package is required
-* `paket simplify` - remove transitive dependencies
-
----
-
 ### building
 
 * automated builds for every branch
@@ -511,14 +431,6 @@ Octopus Deploy
 
 ---
 
-### feedback from team
-
-* breaking out the project was successful
-* packages were a hugh hit for those consuming them
-* keeping packages in two places was a challenge
-
----
-
 ### opportunities for improvement
 
 +++
@@ -526,9 +438,7 @@ Octopus Deploy
 too much of a good thing
 
 Note:
-Talk about how tempting it was to use the packages more than just in the single app. We started using them
-for more projects because they were readily available. Problem was that the documentation and knowledge around
-the process to update and manage the packages didn't yet exist.
+Talk about how tempting it was to use the packages more than just in the single app. We started using them for more projects because they were readily available. Problem was that the documentation and knowledge around the process to update and manage the packages didn't yet exist. Prioritize getting libraries updated in the monolith.
 
 +++
 
