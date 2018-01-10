@@ -13,6 +13,7 @@ Note:
 What is AXS? Explain role at AXS.
 
 ---
+
 ## moving away from a monolith
 
 +++
@@ -20,7 +21,7 @@ What is AXS? Explain role at AXS.
 ## why?
 
 Note:
-In a perfect world, we shouldn't touch the repo and leave it as is. Lay out why not doing that might be the right choice under certain cirumstances. What caused the monolith to be a blocker from where we wanted to go
+In a perfect world, we shouldn't touch the repo and leave it as is. Lay out why not doing that might be the right choice under certain circumstances. What caused the monolith to be a blocker from where we wanted to go
 
 +++
 
@@ -51,6 +52,7 @@ Note:
 Things we could have done differently
 
 ---
+
 # @fa[exclamation-triangle]
 
 +++
@@ -75,11 +77,13 @@ Note:
 Not easy, there is a lot to take into account. We are just starting down this process, and not saying this is the only way or the best way, but has worked for us and has gotten us closer to where we want to be.
 
 ---
+
 ## monoliths
 
 A single project/solution/repository which contains multiple products as well as their shared dependencies.
 
 ---
+
 ### motivations
 
 +++
@@ -182,6 +186,7 @@ published libraries from within the monolith
 * unclear what version was being packaged
 
 ---
+
 ### packaging
 
 +++
@@ -203,7 +208,7 @@ Clearly defined relationships between packages. Allows for each package to be fi
 Reinforce Contracts
 
 Note:
-More obvious the contracts between pieces and how important they are to be clearly visibile and managed. The differences between method visibility, information sharing, APIs should be more clear between the internal components
+More obvious the contracts between pieces and how important they are to be clearly visible and managed. The differences between method visibility, information sharing, APIs should be more clear between the internal components
 
 +++
 
@@ -256,15 +261,11 @@ Immediate dislike of not knowing a version till close to release.
 
 +++
 
-```
-A -> B -> C -> A
-```
+`A -> B -> C -> A`
 
 +++
 
-```
-A -> C -> A
-```
+`A -> C -> A`
 
 ---
 
@@ -292,10 +293,9 @@ tier 2
 
 tier _n_
 
-
 ---
 
-### in flight changes
+### in-flight changes
 
 +++
 
@@ -347,8 +347,12 @@ Talk about how difficult it was for people to take over and deal with moving in 
 
 +++
 
+internal tool to run script above
+
+https://gist.github.com/markwryan/f341c7d1a2178e1dc03a43e36b32e57c
 
 ---
+
 ### developing with packages
 
 +++
@@ -430,7 +434,7 @@ https://fsprojects.github.io/Paket/
 +++
 
 * clearer dependency management
-* transative dependencies vs direct dependencies
+* transitive dependencies vs direct dependencies
 
 +++
 
@@ -441,7 +445,7 @@ https://fsprojects.github.io/Paket/
 
 * `paket outdated` - outdated packages
 * `paket why` - determine why a package is required
-* `paket simplify` - remove transative dependencies
+* `paket simplify` - remove transitive dependencies
 
 ---
 
@@ -450,6 +454,18 @@ https://fsprojects.github.io/Paket/
 * automated builds for every branch
 * build of the integration branch
 * build of release branch
+
++++
+
+automated builds on check-in for every branch
+
++++
+
+control what branches got packaged
+
++++
+
+automated deploy to our dev environment
 
 ---
 
@@ -461,19 +477,21 @@ https://fsprojects.github.io/Paket/
 * directconnect
 
 ---
+
 ### deploying libraries
 
 existing myget account
 
 * manual process
 * no setup for access from build server
-* privacy isues
+* privacy issues
 
 +++
 
 teamcity
 
 ---
+
 ### deploying apps
 
 * octopus
@@ -484,13 +502,15 @@ teamcity
 * releases pushed as nuget packages
 * promoted deployments
 * smart configuration replacements
-* tennanted deployments
-* same, repeatable process interal and in  aws 
+* tenanted deployments
+* same, repeatable process internal and in  aws 
 
 ---
+
 ### feedback from team
 
 ---
+
 ### opportunities for improvement
 
 +++
@@ -510,10 +530,13 @@ internal tooling team
 
 push for more training
 
+
 ---
+
 ### summary
 
 ---
+
 ### questions
 
 
