@@ -393,11 +393,11 @@ Went through multiple workflows, none of which worked great. Major drawback that
 
 ---
 
-### setting up a local nuget server
+### setting up a local NuGet server
 
 * build
 * create package locally
-* host a local nuget feed 
+* host a local NuGet feed 
 
 ---
 
@@ -409,11 +409,11 @@ Went through multiple workflows, none of which worked great. Major drawback that
 
 ---
 
-### issues with nuget
+### issues with NuGet
 
 +++
 
-nuget's dependency resolution caused issues
+NuGet's dependency resolution caused issues
 
 Note:
 NuGet will silently choose the latest version when versions conflict
@@ -428,7 +428,7 @@ package configuration caused to a lot of issues
 
 https://fsprojects.github.io/Paket/
 
-* nuget alternative
+* NuGet alternative
 * cli tool
 
 +++
@@ -480,7 +480,7 @@ automated deploy to our dev environment
 
 ### deploying libraries
 
-existing myget account
+existing MyGet account
 
 * manual process
 * no setup for access from build server
@@ -488,26 +488,34 @@ existing myget account
 
 +++
 
-teamcity
+TeamCity
+
+* built-in
+* immediately accessible to builds
+* internally hosted
 
 ---
 
 ### deploying apps
 
-* octopus
+Octopus Deploy
 
 +++
 
 * create a release version
-* releases pushed as nuget packages
+* releases pushed as NuGet packages
 * promoted deployments
 * smart configuration replacements
 * tenanted deployments
-* same, repeatable process internal and in  aws 
+* same, repeatable process internally and in aws 
 
 ---
 
 ### feedback from team
+
+* breaking out the project was successful
+* packages were a hugh hit for those consuming them
+* keeping packages in two places was a challenge
 
 ---
 
@@ -515,7 +523,7 @@ teamcity
 
 +++
 
-### too much of a good thing
+too much of a good thing
 
 Note:
 Talk about how tempting it was to use the packages more than just in the single app. We started using them
@@ -530,14 +538,9 @@ internal tooling team
 
 push for more training
 
-
----
-
-### summary
-
 ---
 
 ### questions
 
-
+please fill out the survey on AttendeeHub!
 
