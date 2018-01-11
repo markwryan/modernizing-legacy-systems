@@ -3,11 +3,11 @@
 
 ---
 
-![AXS](assets/axs.jpg?size=auto 50%)
-
 Mark Ryan
 
 github.com/markwryan/modernizing-legacy-systems
+
+![AXS](assets/axs.jpg)
 
 ---
 
