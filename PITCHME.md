@@ -3,7 +3,7 @@
 
 ---
 
-![AXS](assets/axs.jpg)
+![AXS](assets/axs.jpg?size=auto 50%)
 
 Mark Ryan
 
