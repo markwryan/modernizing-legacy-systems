@@ -3,14 +3,10 @@
 
 ---
 
+![AXS](assets/axs.png)
+
 Mark Ryan
-
-AXS
-
 github.com/markwryan/modernizing-legacy-systems
-
-Note:
-What is AXS? Explain role at AXS.
 
 ---
 
@@ -35,7 +31,7 @@ Issues abound -- both from a technical and non-technical perspective.
 ## workarounds
 
 Note:
-Talk about how to overcome the issues at hand, both for the technical problems, as well as business and people problems that are involved in the process.
+Overcome the issues at hand, both for the technical problems, as well as business and people problems that are involved in the process.
 
 +++
 
@@ -110,6 +106,10 @@ Any library change immediately impacts all apps. Hard to plan for and manage. Mi
 +++
 
 better tracking of changes
+
+![issues1](assets/issues1.png)
+![issues2](assets/issues2.png)
+![issues3](assets/issues3.png)
 
 Note:
 Difficult time tracking what changes are made, what they affect. Even with issue tracking. Changes shouldn't be a surprise.
@@ -446,7 +446,16 @@ internal tooling team
 
 +++
 
-push for more training
+push for culture of training
+
+---
+
+### takeaways
+
+* releases
+* project management
+* insulated project from monolith
+* packaging
 
 ---
 
