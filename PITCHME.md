@@ -50,32 +50,7 @@ Things we could have done differently
 
 ---
 
-# @fa[exclamation-triangle]
-
-+++
-
-## not selling anything
-
-Note:
-Not trying to convince anyone this is the only way. If a monolith works for your company, great!
-
-+++
-
-## continually growing process
-
-Note:
-Set the stage and set some expectations. Goal of the talk is not to sell one solution in the best, but to educate around some issues and solutions to the issues.
-
-+++
-
-## difficult topics
-
-Note:
-Not easy, there is a lot to take into account. We are just starting down this process, and not saying this is the only way or the best way, but has worked for us and has gotten us closer to where we want to be.
-
----
-
-## monoliths
+## monolith
 
 A single project/solution/repository which contains multiple products as well as their shared dependencies.
 
@@ -155,10 +130,6 @@ How to decide on a subject to first try and split out. Note that having a single
 * copied the project to the root directory
 * deleted everything else
 * pushed to new remote
-
-+++
-
-a clean break
 
 Note:
 no expectation to pull in changes from the monolith after the change. Importance of a single team.
